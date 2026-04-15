@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulario</title>
-    <link rel="stylesheet" href="recursos/bootstrap.min.css">
-    <script src="recursos/sweetalert2@11.js"></script>
+    <title>Formulario de Validación</title>
+    <link rel="stylesheet" href="../recursos/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="../recursos/sweetalert2@11.js"></script>
 </head>
 <body class="bg-light">
 
@@ -15,21 +16,31 @@
                 
                 <div class="card shadow border-0">
                     <div class="card-header bg-dark text-white text-center py-3">
-                        <h4 class="mb-0">Validación de Aplicante</h4>
+                        <h4 class="mb-0 font-weight-bold">Formulario de Aplicación</h4>
                     </div>
                     
                     <div class="card-body p-4">
                         <form id="formAplicante">
                             <div class="form-group">
                                 <label for="nombre" class="font-weight-bold">Nombre Completo</label>
-                                <input type="text" class="form-control" id="nombre" placeholder="Ingrese su nombre" required>
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text"><i class="fas fa-user"></i></span>
+                                    </div>
+                                    <input type="text" class="form-control" id="nombre" placeholder="Ingrese su nombre" required>
+                                </div>
                             </div>
 
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label for="edad" class="font-weight-bold">Edad</label>
-                                        <input type="number" class="form-control" id="edad" placeholder="0" required>
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text"><i class="fas fa-calendar-alt"></i></span>
+                                            </div>
+                                            <input type="number" class="form-control" id="edad" placeholder="0" min="0" required>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
@@ -37,9 +48,9 @@
                                         <label for="sueldo" class="font-weight-bold">Sueldo Pretendido</label>
                                         <div class="input-group">
                                             <div class="input-group-prepend">
-                                                <span class="input-group-text">$</span>
+                                                <span class="input-group-text"><i class="fas fa-dollar-sign"></i></span>
                                             </div>
-                                            <input type="number" step="0.01" class="form-control" id="sueldo" placeholder="0.00" required>
+                                            <input type="number" step="0.01" class="form-control" id="sueldo" placeholder="0.00" min="0" required>
                                         </div>
                                     </div>
                                 </div>
@@ -47,8 +58,8 @@
 
                             <hr class="my-4">
 
-                            <button type="submit" class="btn btn-primary btn-lg btn-block shadow-sm" id="btnProcesar">
-                                <i class="fas fa-paper-plane mr-2"></i> Procesar Aplicación
+                            <button type="submit" class="btn btn-success btn-lg btn-block shadow-sm font-weight-bold" id="btnProcesar">
+                                <i class="fas fa-check-circle mr-2"></i> Procesar Aplicación
                             </button>
                         </form>
                     </div>
@@ -58,9 +69,9 @@
         </div>
     </div>
 
-    <script src="recursos/jquery-3.6.0.min.js"></script>
-    <script src="recursos/popper.min.js"></script>
-    <script src="recursos/bootstrap.min.js"></script>
+    <script src="../recursos/jquery-3.6.0.min.js"></script>
+    <script src="../recursos/popper.min.js"></script>
+    <script src="../recursos/bootstrap.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
